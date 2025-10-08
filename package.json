@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.12.2",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.9.3"
+  },
+  "devDependencies": {
+    "tsconfig-paths": "^4.2.0"
+  }
+}
