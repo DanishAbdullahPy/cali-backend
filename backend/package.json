@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "prebuild": "tsc",
+    "start": "npm run build && node dist/index.js",
     "dev": "nodemon",
     "prisma:generate": "prisma generate",
     "test": "jest"

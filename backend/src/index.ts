@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import { PrismaClient } from '@prisma/client';
 import { loggingMiddleware } from './middlewares/logging.middleware';
 import corsMiddleware from './middlewares/cors.middleware';
+import healthRoutes from './routes/health.routes';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(loggingMiddleware);
 import authRoutes from './routes/auth.routes';
 import userRoutes from './routes/user.routes';
 
+app.use('/api', healthRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 

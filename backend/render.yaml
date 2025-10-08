@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm run build && npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+    healthCheck:
+      path: /api/health
+      interval: 30s
+      timeout: 5s
+      successStatus: 200
+      unhealthyAfter: 3
+    disk:
+      sizeGB: 10
